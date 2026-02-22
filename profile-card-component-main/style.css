@@ -1,16 +1,6 @@
-:root{
---Darkcyan: hsl(185, 75%, 39%);
---Verydarkdesaturatedblue: hsl(229, 23%, 23%);
---Darkgrayishblue: hsl(227, 10%, 46%);
---Darkgray: hsl(0, 0%, 59%);
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 body{
-    font-family: kumbh sans;
+    font-family: "kumbh sans";
     height: 100vh;
     display: grid;
     place-items: center;

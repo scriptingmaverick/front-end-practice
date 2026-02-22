@@ -1,35 +1,186 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Profile card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Victor Crest
-  26
-  London
+    <title>Frontend Mentor | Profile card component</title>
 
-  80K
-  Followers
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --Darkcyan: hsl(185, 75%, 39%);
+        --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+        --Dark-grayish-blue: hsl(227, 10%, 46%);
+        --Darkgray: hsl(0, 0%, 59%);
+      }
 
-  803K
-  Likes
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      body {
+        font-family: "kumbh sans";
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--Darkcyan);
+        background-image:
+          url("./images/bg-pattern-top.svg"),
+          url("./images/bg-pattern-bottom.svg");
+        background-size: auto;
+        background-position:
+          -150px -600px,
+          750px 300px;
+        background-repeat: no-repeat;
+        font-weight: 400;
+        color: var(--Darkgray);
+        font-size: 14px;
+      }
+
+      h1,
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--Very-dark-desaturated-blue);
+      }
+
+      main {
+        width: 20%;
+        height: 48%;
+        background-color: white;
+        border-radius: 20px;
+      }
+
+      figure {
+        width: 100%;
+        height: 35%;
+        background-image: url("/images/bg-pattern-card.svg");
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        border-radius: 50%;
+        border: 10px solid white;
+        align-self: flex-end;
+        position: relative;
+        top: 3.5em;
+      }
+
+      section:not(section.name) {
+        width: 100%;
+      }
+
+      .person {
+        height: 40%;
+        border-bottom: 1px solid var(--Darkgray);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+      }
+
+      .name {
+        margin-top: 2em;
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+      }
+
+      .name p{
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .stats {
+        height: 25%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .attribution {
+        position: absolute;
+        z-index: 1;
+        bottom: 2px;
+        font-size: 11px;
+        text-align: center;
+        color: aliceblue;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <figure><img src="/images/image-victor.jpg" alt="victor image" /></figure>
+      <section class="person">
+        <section class="name">
+          <h2>Victor Crest</h2>
+          <p>26</p>
+        </section>
+        <p>London</p>
+      </section>
+      <section class="stats">
+        <article>
+          <section class="details">
+            <h1>80K</h1>
+            <p>Followers</p>
+          </section>
+        </article>
+        <article>
+          <section class="details">
+            <h1>803K</h1>
+            <p>Likes</p>
+          </section>
+        </article>
+        <article>
+          <section class="details">
+            <h1>1.4K</h1>
+            <p>Photos</p>
+          </section>
+        </article>
+      </section>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Khasim sheik</a>.
+    </div>
+  </body>
 </html>
