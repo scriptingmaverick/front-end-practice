@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 80%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-gap: 15px;
+  grid-template-areas:
+    "create social social schedule"
+    "create social social schedule"
+    "create social social schedule"
+    "create social social schedule"
+    "create manage maintain schedule"
+    "write manage maintain schedule"
+    "write manage maintain schedule"
+    "write g56 grow grow"
+    "write g56 grow grow"
+    "write g56 grow grow";
+  background-color: #2196f3;
+  justify-content: stretch;
+  align-content: end;
+}
+
+.container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.create {
+  grid-area: create;
+}
+
+.write {
+  grid-area: write;
+}
+
+.social {
+  grid-area: social;
+}
+
+.manage {
+  grid-area: manage;
+}
+
+.g56 {
+  grid-area: g56;
+}
+
+.maintain {
+  grid-area: maintain;
+}
+
+.grow {
+  grid-area: grow;
+}
+
+.schedule {
+  grid-area: schedule;
+}
