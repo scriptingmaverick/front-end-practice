@@ -1,25 +1,38 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+  --Purple-100: hsl(254, 88%, 90%);
+  --Purple-500: hsl(256, 67%, 59%);
+  --Yellow-100: hsl(31, 66%, 93%);
+  --Yellow-500: hsl(39, 100%, 71%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%)
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: rgb(229, 229, 229);
+  font-family: DM Sans;
 }
 
 .container {
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 90%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  grid-gap: 15px;
+  grid-gap: 2em;
   grid-template-areas:
     "create social social schedule"
     "create social social schedule"
@@ -31,46 +44,164 @@ body{
     "write g56 grow grow"
     "write g56 grow grow"
     "write g56 grow grow";
-  background-color: #2196f3;
-  justify-content: stretch;
-  align-content: end;
 }
 
-.container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
+section {
+  border-radius: 1em;
+  width: 100%;
+  height: 100%;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+section h2 {
+  font-size: 35px;
+  line-height: 1em;
+  font-weight: 500;
+}
+
+section p {
+  font-size: 18px;
 }
 
 .create {
   grid-area: create;
+  background-color: var(--Yellow-100);
+  gap: 1.5em;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.create .color {
+  color: var(--Purple-500);
+}
+
+.create figure {
+  width: 95%;
+  height: 35%;
 }
 
 .write {
   grid-area: write;
+  background-color: var(--Yellow-500);
+}
+
+.write figure {
+  height: 70%;
+  width: 100%;
+}
+
+.write figure img {
+  object-fit: contain;
 }
 
 .social {
   grid-area: social;
+  background-color: var(--Purple-500);
+  padding: 3em;
+  color: var(--White);
+  gap: .5em;
+}
+
+.social .color {
+  color: var(--Yellow-500);
+}
+
+.social h1 {
+  font-size: 55px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.social figure {
+  width: 50%;
+  height: 15%;
+}
+
+.social p {
+  color: rgba(228, 228, 228, 0.72);
 }
 
 .manage {
   grid-area: manage;
+  background-color: rgb(245, 245, 245);
+  gap: .7em;
+  align-items: flex-start;
+}
+
+.manage h2 {
+  font-size: 35px;
+  line-height: .9em;
+}
+
+.manage figure {
+  height: 70%;
+  width: 100%;
+  align-self: center;
+}
+
+.manage img {
+  object-fit: cover;
+  object-position: left;
 }
 
 .g56 {
   grid-area: g56;
+  background-color: var(--White);
+  align-items: flex-start;
+}
+
+.g56 h1{
+  font-weight: 500;
+  font-size: 55px;
+}
+
+.g56 figure { 
+  margin-top: 1.5em;
+  width: 80%;
+  height: 60%;
 }
 
 .maintain {
   grid-area: maintain;
+  background-color: var(--Yellow-500);
+}
+
+.maintain figure{
+  width: 100%;
+  height: 50%;
+}
+
+.maintain h2{
+  font-size: 32px;
+  line-height: .9em;
+}
+
+.maintain figure img{
+  object-fit: cover;
+  object-position: top;
 }
 
 .grow {
+  display: flex;
+  flex-direction: row;
   grid-area: grow;
+  background-color: var(--Purple-500);
 }
 
 .schedule {
   grid-area: schedule;
+  background-color: var(--Purple-100);
 }

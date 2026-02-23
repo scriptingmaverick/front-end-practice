@@ -1,22 +1,114 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Grid Layout</h1>
+<!doctype html>
+<html lang="en">
 
-    <p>This grid layout contains six columns and three rows:</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <div class="container">
-      <div class="create">create</div>
-      <div class="social">social</div>
-      <div class="schedule">schedule</div>
-      <div class="write">write</div>
-      <div class="manage">manage</div>
-      <div class="g56">g56</div>
-      <div class="maintain">maintain</div>
-      <div class="grow">grow</div>
-    </div>
-  </body>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+  <title>Frontend Mentor | Bento grid</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <section class="create">
+      <h2>
+        Create and schedule content
+        <span class="italic color">quicker.</span>
+      </h2>
+
+      <figure>
+        <img src="/assets/images/illustration-create-post.webp" alt="create post" />
+      </figure>
+    </section>
+
+    <section class="social">
+      <h1>Social Media <span class="color">10x</span> <span class="italic">Faster</span> with AI</h1>
+
+      <figure>
+        <img src="/assets/images/illustration-five-stars.webp" alt="five stars" />
+      </figure>
+      <p>Over 4,000 5-star reviews</p>
+    </section>
+
+    <section class="schedule">
+      <h2>Schedule to social media.</h2>
+
+      <figure>
+        <img src="/assets/images/illustration-schedule-posts.webp" alt="schedule of posts" />
+      </figure>
+
+      <p>
+        Optimize post timings to publish content at the perfect time for your
+        audience.
+      </p>
+    </section>
+
+    <section class="write">
+      <h2>Write your content using AI.</h2>
+
+      <figure>
+        <img src="/assets/images/illustration-ai-content.webp" alt="ai content" />
+      </figure>
+    </section>
+
+    <section class="manage">
+      <figure>
+        <img src="/assets/images/illustration-multiple-platforms.webp" alt="multiple platforms" />
+      </figure>
+
+      <h2>Manage <br>multiple <br>accounts and <br>platforms.</h2>
+    </section>
+
+    <section class="g56">
+      <h1>&gt;56%</h1>
+      <p>faster audience growth</p>
+
+      <figure>
+        <img src="/assets/images/illustration-audience-growth.webp" alt="audience" />
+      </figure>
+    </section>
+
+    <section class="maintain">
+      <h2>Maintain a consistent posting schedule.</h2>
+
+      <figure>
+        <img src="/assets/images/illustration-consistent-schedule.webp" alt="consistent schedule" />
+      </figure>
+    </section>
+
+    <section class="grow">
+      <figure>
+        <img src="/assets/images/illustration-grow-followers.webp" alt="grow followers" />
+      </figure>
+
+      <h2>Grow followers with non-stop content.</h2>
+    </section>
+
+  </div>
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
 </html>
